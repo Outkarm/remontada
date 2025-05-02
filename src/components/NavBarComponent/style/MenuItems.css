@@ -1,0 +1,16 @@
+.menu-list-container {
+  display: flex;
+  gap: 8px;
+}
+
+.menu-list-item {
+  color: #fff;
+  font-family: Inter;
+  font-weight: 600;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  text-align: center;
+  vertical-align: middle;
+  padding: 10px 12px;
+}
