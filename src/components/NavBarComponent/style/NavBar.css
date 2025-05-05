@@ -1,3 +1,7 @@
+.navigation-dropdown-container {
+  z-index: 5000;
+}
+
 .navigation-bar {
   display: flex;
   justify-content: space-between;
@@ -7,4 +11,5 @@
   /* height: 40px; */
   padding: 18px 10%;
   background-color: #3e3c3c;
+  z-index: 6000;
 }

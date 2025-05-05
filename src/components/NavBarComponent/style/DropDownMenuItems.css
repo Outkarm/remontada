@@ -1,0 +1,11 @@
+.dd-menu-item {
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #fff5e1;
+  border-bottom: #fff5e1 1px solid;
+  padding: 20px;
+}
