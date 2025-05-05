@@ -1,0 +1,37 @@
+.hamburger-container {
+  width: 24px;
+  height: 24px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+}
+
+.dash {
+  height: 4px;
+  background-color: #fff;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.top,
+.middle,
+.bottom {
+  width: 100%;
+  transform-origin: center;
+}
+
+/* Transform to "X" when clicked */
+.top.clicked {
+  transform: rotate(45deg) translateY(14px);
+}
+
+.middle.clicked {
+  opacity: 0;
+}
+
+.bottom.clicked {
+  transform: rotate(-45deg) translateY(-14px);
+}

@@ -1,0 +1,42 @@
+/* .my-hero-container {
+  background-color: #1c1a19;
+  height: 100vh;
+  background-image: url("/images/myHeroPage.svg"); 
+  background-repeat: no-repeat;
+  background-position: top right ;
+  background-size: auto 100%;
+  overflow: hidden;
+} */
+
+.my-hero-container {
+  position: relative;
+  display: flex;
+  color: #fff;
+  width: 100%;
+  height: 100vh;
+  overflow: hidden;
+  background-color: #1c1a19;
+}
+
+.my-hero-info-container {
+  max-width: 60%;
+}
+
+.hero-img {
+  position: fixed;
+  top: 0;
+
+  left: 58%; /* Offset by 10% */
+  height: 100%;
+  max-width: none; /* Allow image to overflow if needed */
+  min-width: 50%; /* Prevent too much cropping */
+  /* z-index: 1000; */
+}
+
+/* 📱 Mobile view override */
+@media (max-width: 768px) {
+  .hero-img {
+    top: 19%;
+    left: 35%; /* Reduced offset on smaller screens */
+  }
+}
