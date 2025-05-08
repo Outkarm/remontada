@@ -1,0 +1,22 @@
+.socials-icon-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 10px;
+  position: fixed;
+  left: 2%;
+  top: 45%;
+}
+
+/* 📱 Mobile view override */
+@media (max-width: 768px) {
+  .socials-icon-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: start;
+    gap: 10px;
+    position: relative;
+    left: 0;
+    top: 0;
+  }
+}
