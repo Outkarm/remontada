@@ -1,0 +1,64 @@
+.my-hero-cont {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+}
+
+.my-hero-head-greeting {
+  font-family: Crete Round, sans-serif;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 81.5px;
+  letter-spacing: 0%;
+  color: #f55800;
+}
+
+.my-hero-into {
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #ffffff;
+}
+
+.my-hero-into-info {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 32px;
+  letter-spacing: 0%;
+  color: #f4f5f7;
+  max-width: 566px;
+}
+
+/* 📱 Mobile view override */
+@media (max-width: 768px) {
+  .my-hero-head-greeting {
+    font-weight: 400;
+    font-size: 56px;
+    line-height: 64px;
+    letter-spacing: 0.37px;
+  }
+
+  .my-hero-into {
+    font-family: Roboto, sans-serif;
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 32px;
+    letter-spacing: 0%;
+    vertical-align: middle;
+    color: #fff5e1;
+  }
+
+  .my-hero-into-info {
+    font-family: Poppins, sans-serif;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    letter-spacing: 0%;
+    max-width: 300px;
+    color: #fff;
+  }
+}
