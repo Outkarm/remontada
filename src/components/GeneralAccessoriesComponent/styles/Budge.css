@@ -1,0 +1,23 @@
+.budge {
+  width: fit-content !important;
+  text-wrap: nowrap;
+  /* white-space: nowrap; */
+  padding: 10px 12px;
+  font-family: Inter;
+  font-weight: 500;
+  font-size: 15px;
+  line-height: 20px;
+  letter-spacing: 0%;
+}
+
+.card {
+  background-color: #ffffff3d;
+  color: #ffffff;
+  text-align: center;
+}
+
+.pop-up {
+  background-color: #ffffff;
+  border: #8993a4 solid 2px;
+  color: #091e42;
+}

@@ -1,0 +1,11 @@
+.blur-screen {
+  position: fixed; /* Use fixed for full-screen overlay */
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  background-color: rgba(255, 255, 255, 0.4); /* Light translucent white */
+  backdrop-filter: blur(5px); /* The actual blur effect */
+  -webkit-backdrop-filter: blur(5px); /* Safari support */
+  z-index: 10000; /* Ensure it sits on top */
+}

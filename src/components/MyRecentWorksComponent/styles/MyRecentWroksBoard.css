@@ -1,0 +1,53 @@
+.my-recent-works-board-container {
+  display: flex;
+  width: 100%;
+  gap: 20px;
+}
+
+.my-recent-works-board-image-container {
+  max-width: 50%;
+  height: fit-content;
+  padding: 4%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #ff8c00;
+}
+
+.my-recent-works-board-image {
+  width: 100%;
+  box-shadow: 2px 2px 4px rgba(0, 0, 0, 0.4);
+}
+
+.my-recent-works-board-info-container {
+  max-width: 50%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.my-recent-works-board-project-name {
+  font-family: Crete Round;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #091e42;
+}
+
+.my-recent-works-board-project-info {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 20px;
+  line-height: 28px;
+  letter-spacing: 0%;
+  color: #091e42;
+}
+
+.my-recent-works-board-project-badge-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}

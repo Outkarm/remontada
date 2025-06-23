@@ -1,0 +1,21 @@
+.my-recent-works-page-head-container {
+  display: flex;
+  gap: 10px;
+  align-items: center;
+}
+
+.my-recent-works-page-head {
+  white-space: nowrap;
+  font-family: Crete Round;
+  font-weight: 400;
+  font-size: 40px;
+  line-height: 52px;
+  letter-spacing: 0%;
+  vertical-align: middle;
+  color: #091e42;
+}
+
+.horizontal-line {
+  width: 100%;
+  border: #212121 solid 1px;
+}

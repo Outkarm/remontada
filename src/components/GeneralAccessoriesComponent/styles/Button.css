@@ -1,0 +1,56 @@
+.base-btn {
+  /* display: block; */
+  background-color: #f55800;
+  color: #fff;
+  padding: 12px;
+  font-family: Inter;
+  font-weight: 700;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 3%;
+  text-align: center;
+  vertical-align: middle;
+  border: none;
+}
+
+.svg-container img {
+  margin-top: auto;
+  margin-bottom: auto;
+  margin-left: 10px;
+  filter: brightness(0) saturate(100%) invert(100%) sepia(0%) saturate(0%)
+    hue-rotate(0deg) brightness(100%) contrast(100%); /* White SVG */
+}
+
+.base-btn:hover .svg-container img {
+  filter: brightness(0) saturate(100%) invert(67%) sepia(74%) saturate(6942%)
+    hue-rotate(3deg) brightness(100%) contrast(106%); /* Orange SVG */
+}
+
+.form-btn {
+  display: block;
+}
+
+.card {
+  width: 100%;
+}
+
+.pop-up {
+  width: fit-content;
+}
+
+.base-btn:hover {
+  background-color: #fff5e1;
+  color: #f55800;
+  border: #f55800 2px solid;
+}
+
+.base-btn:active {
+  background-color: #e05304;
+  color: #f4f1f0;
+}
+
+.base-btn:disabled {
+  background-color: #f4f1f0;
+  color: #5b5957;
+  cursor: not-allowed;
+}

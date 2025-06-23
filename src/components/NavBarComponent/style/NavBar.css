@@ -13,3 +13,7 @@
   background-color: #3e3c3c;
   z-index: 6000;
 }
+
+a {
+  text-decoration: none;
+}

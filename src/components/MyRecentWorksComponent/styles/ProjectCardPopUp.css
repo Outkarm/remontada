@@ -1,0 +1,101 @@
+.pop-up-card-container {
+  position: fixed;
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 80vw;
+  height: 85vh;
+  /* max-height: 90vh; */
+  padding: 40px;
+  /* overflow-y: scroll; */
+  background-color: #fff;
+  z-index: 15000;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.close-btn {
+  display: block;
+  background-color: #fff;
+  color: #67798e;
+  border: none;
+  justify-self: end;
+}
+
+.pop-up-card-sub-container-1 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.pop-up-project-name-and-badge-container {
+  display: flex;
+  flex-direction: column;
+  max-width: 60%;
+  gap: 8px;
+}
+
+.pop-up-project-name {
+  font-family: "Crete Round";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  color: #172b4d;
+}
+
+.pop-up-badge-list-container {
+  display: flex;
+  width: 100%;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.pop-up-card-sub-container-2 {
+  display: flex;
+  gap: 40px;
+  flex: 1; /* grow to fill remaining vertical space */
+  height: 100%; /* this is critical */
+  overflow: hidden;
+}
+
+.pop-up-card-image-container {
+  flex: 0 0 65%;
+  height: 100%;
+  overflow: hidden;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+}
+
+.project-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* ✅ Fill the space, may crop edges */
+  display: block;
+}
+
+.pop-up-card-info-and-btn-container {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.project-info {
+  font-family: "Inter";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: #344563;
+  word-wrap: break-word;
+}
+
+.pop-up-buttons-container {
+  display: flex;
+  gap: 15px;
+}
