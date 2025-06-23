@@ -1,0 +1,132 @@
+.project-card-container {
+  position: relative;
+  width: 327px;
+  max-width: 327px;
+  height: 380px;
+  max-height: 380px;
+  /* overflow: hidden; */
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(
+    180.45deg,
+    rgba(38, 38, 38, 0) 0.75%,
+    rgba(38, 38, 38, 0.9) 84.18%
+  );
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.prpject-background-img {
+  position: absolute;
+  /* margin-top: auto; */
+  width: 327px;
+  height: 380px;
+  object-fit: cover;
+  z-index: -5;
+}
+
+.card-details-container {
+  position: relative;
+  margin-top: auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 15px;
+  z-index: 5;
+}
+
+.budge-list-container {
+  display: flex;
+  gap: 8px;
+}
+
+.project-card-name {
+  font-family: Crete Round;
+  font-weight: 400;
+  font-size: 32px;
+  line-height: 44px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+.project-card-info {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 17px;
+  line-height: 24px;
+  letter-spacing: 0%;
+  color: #ffffff;
+}
+
+button {
+  display: none;
+}
+
+.project-card-container:hover {
+  background-image: none;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.project-card-container:hover .card-details-container {
+  display: none;
+}
+
+.project-card-container:hover button {
+  display: block;
+  margin-top: auto;
+}
+
+.project-card-container:active {
+  background-image: none;
+  border: #091e42 solid 2px;
+}
+
+.project-card-container:active .card-details-container {
+  display: none;
+}
+
+.project-card-container:active button {
+  display: block;
+  margin-top: auto;
+}
+
+.edit-delete-btn-container {
+  position: relative;
+  top: -35px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.edit-delete-btn {
+  /* display: block; */
+  position: relative;
+  width: 70px;
+  height: 70px;
+  padding: 10px;
+  border-radius: 50%;
+  background-color: #fff5e1;
+  color: #f55800;
+  border: #f55800 2px solid;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.1), 0 4px 6px rgba(0, 0, 0, 0.1);
+  transition: all 0.2s ease-in-out;
+  cursor: pointer;
+}
+
+.edit-delete-btn:hover {
+  background-color: #f55800;
+  color: #fff;
+  box-shadow: 0 16px 32px rgba(0, 0, 0, 0.15), 0 6px 12px rgba(0, 0, 0, 0.25);
+  transform: translateY(-4px);
+}
+
+.pen {
+  position: relative;
+  left: -35px;
+}
+
+.bin {
+  position: relative;
+  left: 35px;
+}
