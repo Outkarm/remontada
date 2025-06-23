@@ -1,0 +1,14 @@
+.background-design {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  /* Background styling */
+  background-image: url("/Background-image.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  background-attachment: fixed;
+  z-index: -10;
+}
