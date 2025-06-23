@@ -8,6 +8,7 @@ import Overlay from "./components/Overlay";
 import AddCardForm from "./components/AddCardForm";
 import EditCardForm from "./components/EditCardForm";
 import ProjectCardPopUp from "./components/ProjectCardPopUp";
+import BackgroundDesign from "../GeneralAccessoriesComponent/BackgroundDesign";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
 import "swiper/css";
@@ -53,6 +54,7 @@ const MyRecentWorks = () => {
   const bdgList = ["CSS", "HTML", "Bootstrap", "Ruby"];
   return (
     <div className="my-recent-works-container">
+      <BackgroundDesign />
       <MyRecentWorksHead />
       {projectCards ? (
         <div className="my-recent-works-board-carousel">
