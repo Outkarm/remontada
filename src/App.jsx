@@ -1,7 +1,8 @@
 import "./App.css";
+import NavBar from "./components/NavBarComponent/NavBar.jsx";
 import HeroPage from "./pages/HeroPage.jsx";
 import MyRecentWorksPage from "./pages/MyRecentWorksPage.jsx";
-import NavBar from "./components/NavBarComponent/NavBar.jsx";
+import AboutPage from "./pages/AboutPage.jsx";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
 function App() {
@@ -12,8 +13,8 @@ function App() {
         <Routes>
           <Route path="/" Component={HeroPage} />
           <Route path="/portfolio" Component={MyRecentWorksPage} />
+          <Route path="/about" Component={AboutPage} />
           <Route path="/contact" Component={MyRecentWorksPage} />
-          <Route path="/about" Component={MyRecentWorksPage} />
         </Routes>
       </Router>
     </div>
