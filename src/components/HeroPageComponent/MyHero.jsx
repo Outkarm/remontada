@@ -40,9 +40,7 @@ const MyHero = () => {
         <MyHeroSocials />
         <MyHeroInfo />
       </div>
-      <div className="my-hero-container">
-        <img src="/images/myHeroPage.svg" className="hero-img" alt="Hero" />
-      </div>
+      <img src="/images/myHeroPage.svg" className="hero-img" alt="Hero" />
     </div>
   );
 };
