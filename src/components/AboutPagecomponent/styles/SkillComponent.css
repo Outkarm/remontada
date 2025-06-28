@@ -1,0 +1,113 @@
+.skill-main-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 55px;
+  border-top: #f4f5f794 solid 1px;
+  border-bottom: #f4f5f794 solid 1px;
+  color: #f55800;
+  padding: 50px 0;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+/* Hover state */
+.skill-main-container:hover {
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.05); /* subtle white overlay */
+}
+
+/* Active (clicked/expanded) state */
+.skill-main-container.active {
+  padding: 50px 20px;
+  background-color: rgba(255, 255, 255, 0.1); /* slightly more intense */
+  border-bottom: none;
+}
+
+.skill-main-name {
+  font-family: "Crete Round";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 55px;
+  line-height: 35px;
+}
+
+.drop-down-skills-container {
+  display: flex;
+  gap: 50px;
+  border-bottom: #f4f5f794 solid 1px;
+}
+
+.what-i-do-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  padding: 50px 0 50px 0;
+}
+
+.coading-skills-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  width: 50%;
+  padding: 50px 0 50px 0;
+}
+
+.drop-down-skills-container {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 28px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.technologies--skills-chartcontainer,
+.technologies-container {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  height: 535px;
+  overflow-x: auto;
+}
+
+/* scroll style */
+/* Slim scrollbar styling for Webkit-based browsers (Chrome, Safari, etc.) */
+::-webkit-scrollbar {
+  width: 8px; /* Slim scrollbar */
+  height: 8px; /* Slim horizontal scrollbar */
+}
+
+/* The track (background of the scrollbar) - fully transparent */
+::-webkit-scrollbar-track {
+  background: transparent; /* Fully transparent track */
+  border-radius: 10px; /* Rounded corners */
+}
+
+/* The thumb (draggable part) - slightly transparent */
+::-webkit-scrollbar-thumb {
+  background: rgba(
+    192,
+    192,
+    192,
+    0.5
+  ); /* Light grey with slight transparency */
+  border-radius: 10px; /* Rounded corners */
+  border: 2px solid transparent; /* Transparent border */
+}
+
+/* When hovering over the thumb - slightly darker */
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(
+    160,
+    160,
+    160,
+    0.7
+  ); /* Darker grey with slight transparency */
+}
+
+/* When the thumb is active (being dragged) */
+::-webkit-scrollbar-thumb:active {
+  background: rgba(136, 136, 136, 0.8); /* Even darker grey with more opacity */
+}
