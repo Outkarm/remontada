@@ -1,0 +1,66 @@
+{
+  "skillList": [
+    {
+      "skillName": "HTML",
+      "skillPercentage": 95
+    },
+    {
+      "skillName": "CSS",
+      "skillPercentage": 80
+    },
+    {
+      "skillName": "JavaScript",
+      "skillPercentage": 90
+    },
+    {
+      "skillName": "React",
+      "skillPercentage": 85
+    },
+    {
+      "skillName": "TypeScript",
+      "skillPercentage": 75
+    },
+    {
+      "skillName": "Redux",
+      "skillPercentage": 70
+    },
+    {
+      "skillName": "Tailwind CSS",
+      "skillPercentage": 70
+    },
+    {
+      "skillName": "Next.js",
+      "skillPercentage": 85
+    },
+    {
+      "skillName": "Bootstrap",
+      "skillPercentage": 70
+    },
+    {
+      "skillName": "Webpack",
+      "skillPercentage": 70
+    },
+    {
+      "skillName": "Responsive Design",
+      "skillPercentage": 95
+    },
+    {
+      "skillName": "Figma (Frontend Integration)",
+      "skillPercentage": 95
+    }
+  ],
+  "whatIDo": [
+    {
+      "name": "Language",
+      "detail": "Proficient in HTML, CSS, and JavaScript, with a strong grasp of semantic structure, styling techniques, and dynamic interactions. Solid foundation in TypeScript for scalable and type-safe frontend development."
+    },
+    {
+      "name": "Frameworks",
+      "detail": "Comfortable working with React and Next.js for building modern web applications. Experienced in using Redux for state management, Tailwind CSS and Bootstrap for UI styling, and Webpack for optimized builds."
+    },
+    {
+      "name": "Ability",
+      "detail": "Confident in building responsive websites, interactive dashboards, single-page applications, and landing pages. Skilled in translating designs from Figma into pixel-perfect implementations with real functionality."
+    }
+  ]
+}
