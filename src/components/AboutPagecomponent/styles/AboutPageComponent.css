@@ -1,0 +1,24 @@
+.about-page-container {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #fff;
+  /* width: 100%; */
+  padding: 15% 10% 15% 10%;
+  height: 100vh;
+  overflow-x: hidden;
+  background-color: #262626;
+}
+
+.about-hr {
+  margin-top: 15%;
+  margin-bottom: 15%;
+}
+
+.about-page-img {
+  width: 673.2692260742188px;
+  height: 353.1000061035156px;
+  position: absolute;
+  top: 277px;
+  left: 56%;
+}

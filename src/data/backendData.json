@@ -1,0 +1,42 @@
+{
+  "skillList": [
+    {
+      "skillName": "Ruby",
+      "skillPercentage": 80
+    },
+    {
+      "skillName": "Ruby on Rails",
+      "skillPercentage": 60
+    },
+    {
+      "skillName": "PostgreSQL",
+      "skillPercentage": 60
+    },
+    {
+      "skillName": "REST",
+      "skillPercentage": 70
+    },
+    {
+      "skillName": "Firebase",
+      "skillPercentage": 60
+    }
+  ],
+  "whatIDo": [
+    {
+      "name": "Language",
+      "detail": "Proficient in Ruby, with hands-on experience in building scalable backend systems. Comfortable writing efficient and maintainable code, and understanding object-oriented principles in Ruby. Intermediate experience in other languages like JavaScript for Node.js-based backend development."
+    },
+    {
+      "name": "Frameworks",
+      "detail": "Experienced in Ruby on Rails, using it to develop full-stack web applications with a focus on speed and efficiency. Have also worked with REST APIs for seamless integration and communication between systems."
+    },
+    {
+      "name": "Database",
+      "detail": "Comfortable working with relational databases like PostgreSQL. Have built database schemas, optimized queries, and handled migrations. Experience with Firebase as a NoSQL database for certain projects where real-time syncing and scaling were important."
+    },
+    {
+      "name": "Ability",
+      "detail": "Confident in building and maintaining APIs, server-side logic, and database-driven applications. Able to integrate third-party services and manage cloud-based deployments. Capable of handling user authentication, authorization, and session management in production environments."
+    }
+  ]
+}

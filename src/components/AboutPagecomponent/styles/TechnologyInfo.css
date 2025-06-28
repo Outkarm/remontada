@@ -1,0 +1,37 @@
+.technology-info-container {
+  display: flex;
+  gap: 40px;
+}
+
+.technology-icon-container {
+  font-family: "Crete Round";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 72px;
+  line-height: 82px;
+  color: #f55800;
+}
+
+.technology-info {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.technology-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.technology-info-text {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 30px;
+  color: rgba(255, 255, 255, 0.7);
+}
