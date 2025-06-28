@@ -1,0 +1,44 @@
+.technology-skill-chart {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.technology-sckill-chart-info-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.technology-sckill-chart-name {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 35px;
+  color: #ffffff;
+}
+
+.technology-sckill-chart-percentage {
+  font-family: "Poppins";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 35px;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.bar-chart {
+  /* height: 16px; */
+  border: #444444 4px solid;
+  border-radius: 8px;
+  padding: 2px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bar {
+  height: 6px;
+  background-color: #f55800;
+  border-radius: 3px;
+}
