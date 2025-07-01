@@ -1,0 +1,11 @@
+.contact-socials-container {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 20px;
+  width: 100%;
+  border-top: #dfe1e6 solid 1px;
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+}
