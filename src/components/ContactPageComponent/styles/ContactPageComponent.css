@@ -1,0 +1,17 @@
+.contact-page-container {
+  padding: 0 10%;
+  height: 100vh;
+}
+
+.center-form-quote-container {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.quote-form-container {
+  display: flex;
+  gap: 80px;
+  width: 100%;
+}

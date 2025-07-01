@@ -1,0 +1,39 @@
+.contact-form-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.names-container {
+  display: flex;
+  gap: 20px;
+}
+
+.name-input,
+.email-input {
+  font-family: "Roboto";
+  font-style: normal;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  color: #979493;
+  width: 100%;
+  border: none;
+  border-bottom: #dbd8d7 1px solid;
+  border-radius: 0;
+  padding: 20px;
+}
+
+.message-text-area {
+  font-family: "Inter";
+  font-style: italic;
+  font-weight: 400;
+  font-size: 15px;
+  line-height: 24px;
+  padding: 20px;
+  color: #3c3a39;
+  width: 100%;
+  background: #fbf8f7;
+  border: none;
+}
