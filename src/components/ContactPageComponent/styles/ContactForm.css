@@ -37,3 +37,9 @@
   background: #fbf8f7;
   border: none;
 }
+
+@media (max-width: 768px) {
+  .contact-form-container {
+    align-items: center;
+  }
+}

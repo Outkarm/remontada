@@ -61,24 +61,10 @@ const ProjectCard = ({
     <div className="project-card-container">
       <div className="edit-delete-btn-container">
         <button onClick={hundleEditCard} className="edit-delete-btn pen">
-          <FontAwesomeIcon
-            style={{
-              // color: "#ff8c00",
-              // backgroundColor: "#fff",
-              fontSize: "40px",
-            }}
-            icon={faPen}
-          />
+          <FontAwesomeIcon icon={faPen} />
         </button>
         <button onClick={handleDelete} className="edit-delete-btn bin">
-          <FontAwesomeIcon
-            style={{
-              // color: "#ff8c00",
-              // backgroundColor: "#fff",
-              fontSize: "40px",
-            }}
-            icon={faTrash}
-          />
+          <FontAwesomeIcon icon={faTrash} />
         </button>
       </div>
       <div className="card-details-container">

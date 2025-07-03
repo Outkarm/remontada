@@ -4,15 +4,15 @@
   flex-direction: column;
   color: #fff;
   /* width: 100%; */
-  padding: 15% 10% 15% 10%;
+  padding: 25vh 10%;
   height: 100vh;
   overflow-x: hidden;
   background-color: #262626;
 }
 
 .about-hr {
-  margin-top: 15%;
-  margin-bottom: 15%;
+  margin-top: 25vh;
+  margin-bottom: 25vh;
 }
 
 .about-page-img {
@@ -21,4 +21,11 @@
   position: absolute;
   top: 277px;
   left: 56%;
+}
+
+@media (max-width: 1500px) {
+  .about-hr {
+    margin-top: 30vh;
+    margin-bottom: 25vh;
+  }
 }

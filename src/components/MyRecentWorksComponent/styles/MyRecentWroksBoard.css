@@ -51,3 +51,47 @@
   flex-wrap: wrap;
   gap: 10px;
 }
+
+@media (max-width: 1230px) {
+  .my-recent-works-board-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .my-recent-works-board-image-container {
+    max-width: 75%;
+    padding: 6%;
+  }
+  .my-recent-works-board-info-container {
+    max-width: 70%;
+  }
+}
+
+@media (max-width: 768px) {
+  .my-recent-works-board-image-container {
+    max-width: 100%;
+    padding: 8%;
+  }
+
+  .my-recent-works-board-info-container {
+    max-width: 95%;
+  }
+
+  .my-recent-works-board-project-name {
+    font-family: "Crete Round";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 44px;
+    color: #091e42;
+  }
+
+  .my-recent-works-board-project-info {
+    font-family: "Inter";
+    font-style: normal;
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 24px;
+    color: #091e42;
+  }
+}

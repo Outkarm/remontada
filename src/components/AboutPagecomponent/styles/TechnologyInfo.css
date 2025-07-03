@@ -35,3 +35,27 @@
   line-height: 30px;
   color: rgba(255, 255, 255, 0.7);
 }
+
+@media (max-width: 768px) {
+  .technology-info-container {
+    gap: 20px;
+  }
+
+  .technology-icon-container {
+    font-size: 50px;
+    line-height: 42px;
+  }
+
+  .technology-info {
+    gap: 8px;
+  }
+
+  .technology-name {
+    line-height: 20px;
+  }
+
+  .technology-info-text {
+    font-size: 12px;
+    line-height: 18px;
+  }
+}

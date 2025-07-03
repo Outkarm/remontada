@@ -1,25 +1,49 @@
+import { useState, useEffect } from "react";
 import Button from "../../GeneralAccessoriesComponent/Button.jsx";
 import "../styles/ContactForm.css";
 
 const ContactForm = () => {
+  const [isMobile, setIsMobile] = useState(false);
+
+  useEffect(() => {
+    const handleResize = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
+    return () => window.removeEventListener("resize", handleResize);
+  }, []);
+
   return (
     <form className="contact-form-container">
-      <div className="names-container">
+      {isMobile ? (
         <input
           type="text"
-          id="First-Name"
-          name="First Name"
-          placeholder="First Name"
+          id="Full-Name"
+          name="Full Name"
+          placeholder="Full Name"
           className="name-input"
         />
-        <input
-          type="text"
-          id="Last-Name"
-          name="Last Name"
-          placeholder="Last Name"
-          className="name-input"
-        />
-      </div>
+      ) : (
+        <div className="names-container">
+          <input
+            type="text"
+            id="First-Name"
+            name="First Name"
+            placeholder="First Name"
+            className="name-input"
+          />
+          <input
+            type="text"
+            id="Last-Name"
+            name="Last Name"
+            placeholder="Last Name"
+            className="name-input"
+          />
+        </div>
+      )}
       <input
         type="text"
         id="Email"

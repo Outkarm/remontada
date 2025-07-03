@@ -27,6 +27,10 @@ const ProjectCardPopUp = ({
 
   return (
     <div className="pop-up-card-container">
+      <button onClick={handleCloseBTN} className="close-btn">
+        <FontAwesomeIcon size="3x" icon={faXmark} />
+      </button>
+
       <div className="pop-up-card-sub-container-1">
         <div className="pop-up-project-name-and-badge-container">
           <div className="pop-up-project-name">{projectName}</div>
@@ -35,11 +39,6 @@ const ProjectCardPopUp = ({
               <Budge bdgText={bdgName} bdgID={index} bdgType={"pop-up"} />
             ))}
           </div>
-        </div>
-        <div>
-          <button onClick={handleCloseBTN} className="close-btn">
-            <FontAwesomeIcon size="3x" icon={faXmark} />
-          </button>
         </div>
       </div>
       <div className="pop-up-card-sub-container-2">

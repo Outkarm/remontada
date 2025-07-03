@@ -1,6 +1,8 @@
 .contact-page-container {
-  padding: 0 10%;
-  height: 100vh;
+  position: relative;
+  padding: 20vh 10%;
+  height: auto;
+  overflow: auto;
 }
 
 .center-form-quote-container {
@@ -14,4 +16,12 @@
   display: flex;
   gap: 80px;
   width: 100%;
+}
+
+@media (max-width: 768px) {
+  .quote-form-container {
+    flex-direction: column;
+    gap: 40px;
+    align-items: center;
+  }
 }
