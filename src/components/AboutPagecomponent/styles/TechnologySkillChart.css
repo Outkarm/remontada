@@ -42,3 +42,14 @@
   background-color: #f55800;
   border-radius: 3px;
 }
+
+@media (max-width: 768px) {
+  .technology-sckill-chart-name {
+    line-height: 20px;
+  }
+
+  .technology-sckill-chart-percentage {
+    font-size: 12px;
+    line-height: 20px;
+  }
+}

@@ -111,3 +111,53 @@
 ::-webkit-scrollbar-thumb:active {
   background: rgba(136, 136, 136, 0.8); /* Even darker grey with more opacity */
 }
+
+@media (max-width: 768px) {
+  .skill-main-container {
+    font-size: 32px;
+    padding: 32px 0;
+  }
+
+  .skill-main-container:hover {
+    padding: 32px 16px;
+  }
+
+  .skill-main-container.active {
+    padding: 32px 16px;
+  }
+
+  .skill-main-name {
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 24px;
+  }
+
+  .drop-down-skills-container {
+    flex-direction: column;
+    align-items: center;
+    width: fit-content;
+  }
+
+  .what-i-do-container {
+    width: 100%;
+    padding: 16px 0 16px 0;
+  }
+
+  .coading-skills-container {
+    width: 100%;
+    padding: 16px 0 16px 0;
+  }
+
+  .drop-down-skills-container {
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 35px;
+    color: #ffffff;
+  }
+
+  .technologies--skills-chartcontainer,
+  .technologies-container {
+    height: auto;
+    overflow-x: hidden;
+  }
+}
