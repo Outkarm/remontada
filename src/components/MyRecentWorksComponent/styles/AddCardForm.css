@@ -220,3 +220,24 @@ textarea {
   position: absolute;
   cursor: pointer;
 }
+
+@media (max-width: 768px) {
+  .card-form-container {
+    width: 90vw;
+    padding: 20px;
+  }
+
+  input {
+    width: 100%;
+  }
+
+  textarea {
+    width: 100%;
+  }
+}
+
+@media (max-width: 420px) {
+  .custom-select-dropdown {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
