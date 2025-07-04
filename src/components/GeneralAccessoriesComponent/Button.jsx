@@ -8,6 +8,7 @@ const Button = ({
   btnType = "button",
   costomBlock = false,
   clickFunction,
+  isLoading = false,
 }) => {
   return (
     <button
@@ -17,15 +18,21 @@ const Button = ({
     >
       {btnText}
 
-      {isLiveLink && (
-        <span class="svg-container">
-          <img src="/images/live_link.svg" alt="Button Icon" />
-        </span>
-      )}
-      {isSourceLink && (
-        <span class="svg-container">
-          <img src="/images/source_link.svg" alt="Button Icon" />
-        </span>
+      {isLoading ? (
+        <div className="spinner"></div>
+      ) : (
+        <>
+          {isLiveLink && (
+            <span className="svg-container">
+              <img src="/images/live_link.svg" alt="Button Icon" />
+            </span>
+          )}
+          {isSourceLink && (
+            <span className="svg-container">
+              <img src="/images/source_link.svg" alt="Button Icon" />
+            </span>
+          )}
+        </>
       )}
     </button>
   );
