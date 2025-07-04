@@ -11,10 +11,14 @@ const MenuItems = ({ itemsArr }) => {
           </div>
         </Link>
       ))}
-      <div className="menu-list-item">
+      <a
+        href="mailto:jkpordje@gmail.com"
+        rel="noopener"
+        className="menu-list-item"
+      >
         {" "}
         <img src="/images/messageImage.svg" alt="icon" />
-      </div>
+      </a>
     </div>
   );
 };
