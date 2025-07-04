@@ -87,6 +87,7 @@ const AddCardForm = ({ closeAddForm }) => {
           placeholder="Project Name"
           value={formData.name}
           onChange={(e) => setFormData({ ...formData, name: e.target.value })}
+          required
         />
       </div>
 
@@ -101,6 +102,7 @@ const AddCardForm = ({ closeAddForm }) => {
           onChange={(e) =>
             setFormData({ ...formData, summary_text: e.target.value })
           }
+          required
         />
       </div>
       <div className="label-input-container">
@@ -114,6 +116,7 @@ const AddCardForm = ({ closeAddForm }) => {
           onChange={(e) =>
             setFormData({ ...formData, detailed_text: e.target.value })
           }
+          required
         />
       </div>
       <div className="custom-select-wrapper">
@@ -160,6 +163,7 @@ const AddCardForm = ({ closeAddForm }) => {
               setFormData({ ...formData, live_link: e.target.value })
             }
             className="card-link"
+            required
           />
         </div>
         <div className="label-input-container">
@@ -174,6 +178,7 @@ const AddCardForm = ({ closeAddForm }) => {
               setFormData({ ...formData, source_link: e.target.value })
             }
             className="card-link"
+            required
           />
         </div>
       </div>
@@ -185,6 +190,7 @@ const AddCardForm = ({ closeAddForm }) => {
             id="Project-Image"
             accept="image/*"
             onChange={handleImageChange}
+            required
           />
           {!previewImage ? (
             <span className="upload-placeholder">📁 Click to Upload</span>
