@@ -29,7 +29,11 @@ const NavBar = () => {
 
         <Hamburger isClicked={isClicked} setIsClicked={setIsClicked} />
       </div>
-      <DropDownMenu isClicked={isClicked} isMobile={isMobile} />
+      <DropDownMenu
+        isClicked={isClicked}
+        setIsClicked={setIsClicked}
+        isMobile={isMobile}
+      />
     </div>
   ) : (
     <div className="navigation-bar">

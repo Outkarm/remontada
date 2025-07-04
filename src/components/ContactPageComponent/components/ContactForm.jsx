@@ -17,7 +17,11 @@ const ContactForm = () => {
   }, []);
 
   return (
-    <form className="contact-form-container">
+    <form
+      action={"https://formspree.io/f/mbjblgga"}
+      method="POST"
+      className="contact-form-container"
+    >
       {isMobile ? (
         <input
           type="text"
@@ -25,6 +29,7 @@ const ContactForm = () => {
           name="Full Name"
           placeholder="Full Name"
           className="name-input"
+          required
         />
       ) : (
         <div className="names-container">
@@ -34,6 +39,7 @@ const ContactForm = () => {
             name="First Name"
             placeholder="First Name"
             className="name-input"
+            required
           />
           <input
             type="text"
@@ -41,6 +47,7 @@ const ContactForm = () => {
             name="Last Name"
             placeholder="Last Name"
             className="name-input"
+            required
           />
         </div>
       )}
@@ -50,6 +57,7 @@ const ContactForm = () => {
         name="Email"
         placeholder="Email address"
         className="email-input"
+        required
       />
       <textarea
         type="text"
@@ -57,6 +65,7 @@ const ContactForm = () => {
         name="Message"
         placeholder="Write me something..."
         className="message-text-area"
+        required
       />
       <Button
         btnText={"Get in touch"}
