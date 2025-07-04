@@ -13,15 +13,18 @@ const ProjectCardPopUp = ({
   seeSourceLink,
   setOpenPopUpCard,
 }) => {
-  const handleCloseBTN = () => {
+  const handleCloseBTN = (e) => {
+    e.preventDefault;
     setOpenPopUpCard(false);
   };
 
-  const handleSeeProjectLive = () => {
+  const handleSeeProjectLive = (e) => {
+    e.preventDefault;
     window.open(seeLiveLink);
   };
 
   const handleSeeProjectSource = () => {
+    e.preventDefault;
     window.open(seeSourceLink);
   };
 
