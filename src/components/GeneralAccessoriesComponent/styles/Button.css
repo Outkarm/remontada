@@ -54,3 +54,40 @@
   color: #5b5957;
   cursor: not-allowed;
 }
+
+.spinner {
+  width: 20px;
+  height: 20px;
+  margin: 0 5px;
+  border: 2.5px solid transparent;
+  border-top-color: #fff; /* default (button default text color) */
+  border-radius: 50%;
+  animation: spin 0.6s linear infinite;
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+}
+
+/* Match spinner on hover */
+.base-btn:hover .spinner {
+  border-color: rgba(245, 88, 0, 0.3); /* faded ring matching orange */
+  border-top-color: #f55800;
+}
+
+/* Match spinner on active */
+.base-btn:active .spinner {
+  border-color: rgba(244, 241, 240, 0.3); /* faded ring matching light text */
+  border-top-color: #f4f1f0;
+}
+
+/* Match spinner on disabled */
+.base-btn:disabled .spinner {
+  border-color: rgba(91, 89, 87, 0.3); /* faded ring gray */
+  border-top-color: #5b5957;
+}
+
+@keyframes spin {
+  100% {
+    transform: rotate(360deg);
+  }
+}
