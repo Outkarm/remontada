@@ -1,6 +1,6 @@
 import "../styles/MyRecentWorksProjects.css";
 import { useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import ProjectCard from "./ProjectCard";
 import { updateAllCards } from "../../../redux/projectCardSlice/actions/cardActions";
 import axios from "axios";
@@ -15,6 +15,7 @@ const MyRecentWorksProjects = ({
   setPopUpCardIndex,
 }) => {
   const dispatch = useDispatch();
+  const adminAccess = useSelector((state) => state.portfolio.admin.adminAccess);
 
   // const picLink =
   //   "https://files.selar.co/product-images/2024/products/Viclabulary/project-management-selar.co-65f60d5694847.jpg";
@@ -69,18 +70,19 @@ const MyRecentWorksProjects = ({
           setPopUpCardIndex={setPopUpCardIndex}
         />
       ))}
-
-      <button
-        className="plus-container"
-        onClick={() => {
-          openAddForm();
-        }}
-      >
-        <div className="circle-plus-container">
-          <div className="vertical-plus-line"></div>
-          <div className="horizontal-plus-line"></div>
-        </div>
-      </button>
+      {adminAccess === "live" && (
+        <button
+          className="plus-container"
+          onClick={() => {
+            openAddForm();
+          }}
+        >
+          <div className="circle-plus-container">
+            <div className="vertical-plus-line"></div>
+            <div className="horizontal-plus-line"></div>
+          </div>
+        </button>
+      )}
     </div>
   );
 };

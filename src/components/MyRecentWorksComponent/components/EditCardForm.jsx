@@ -208,7 +208,6 @@ const EditCardForm = ({
             id="Project-Image"
             accept="image/*"
             onChange={handleImageChange}
-            required
           />
           {!previewImage ? (
             <span className="upload-placeholder">📁 Click to Upload</span>
