@@ -4,7 +4,7 @@ import Button from "../../GeneralAccessoriesComponent/Button";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPen, faTrash } from "@fortawesome/free-solid-svg-icons";
 import axios from "axios";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { deleteCard } from "../../../redux/projectCardSlice/actions/cardActions";
 import { Swiper, SwiperSlide } from "swiper/react";
 import { Autoplay, Pagination, Navigation } from "swiper/modules";
@@ -30,6 +30,8 @@ const ProjectCard = ({
   // console.log(projectInfo);
   // console.log(projectName);
   // console.log(bdgList);
+
+  const adminAccess = useSelector((state) => state.portfolio.admin.adminAccess);
 
   const hundleEditCard = () => {
     setProjectCardDatabaseID(projectCardDBID);
@@ -59,14 +61,16 @@ const ProjectCard = ({
 
   return (
     <div className="project-card-container">
-      <div className="edit-delete-btn-container">
-        <button onClick={hundleEditCard} className="edit-delete-btn pen">
-          <FontAwesomeIcon icon={faPen} />
-        </button>
-        <button onClick={handleDelete} className="edit-delete-btn bin">
-          <FontAwesomeIcon icon={faTrash} />
-        </button>
-      </div>
+      {adminAccess === "live" && (
+        <div className="edit-delete-btn-container">
+          <button onClick={hundleEditCard} className="edit-delete-btn pen">
+            <FontAwesomeIcon icon={faPen} />
+          </button>
+          <button onClick={handleDelete} className="edit-delete-btn bin">
+            <FontAwesomeIcon icon={faTrash} />
+          </button>
+        </div>
+      )}
       <div className="card-details-container">
         <div className="project-card-name"> {projectName} </div>
         <div className="project-card-info">{projectInfo}</div>

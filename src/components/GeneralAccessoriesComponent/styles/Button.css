@@ -1,7 +1,7 @@
 .base-btn {
   /* display: block; */
-  background-color: #f55800;
-  color: #fff;
+  background-color: #f55800 !important;
+  color: #fff !important;
   padding: 12px;
   font-family: Inter;
   font-weight: 700;
@@ -39,14 +39,14 @@
 }
 
 .base-btn:hover {
-  background-color: #fff5e1;
-  color: #f55800;
-  border: #f55800 2px solid;
+  background-color: #fff5e1 !important;
+  color: #f55800 !important;
+  border: #f55800 2px solid !important;
 }
 
 .base-btn:active {
-  background-color: #e05304;
-  color: #f4f1f0;
+  background-color: #e05304 !important;
+  color: #f4f1f0 !important;
 }
 
 .base-btn:disabled {

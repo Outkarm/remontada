@@ -1,6 +1,7 @@
 import { configureStore } from "@reduxjs/toolkit";
 import { combineReducers } from "redux";
 import cardReducer from "./projectCardSlice/reducers/cardReducer";
+import adminAccessReducer from "./adminAccessSlice/reducers/adminAccessReducers.js";
 import {
   persistStore,
   persistReducer,
@@ -19,7 +20,10 @@ const persistConfig = {
   storage,
 };
 
-const rootReducer = combineReducers({ card: cardReducer });
+const rootReducer = combineReducers({
+  card: cardReducer,
+  admin: adminAccessReducer,
+});
 const persistedReducer = persistReducer(persistConfig, rootReducer);
 
 const store = configureStore({

@@ -1,0 +1,61 @@
+.auth-access-dropdown-container {
+  position: fixed;
+  top: 70px;
+  left: 8%;
+  width: 240px;
+  background-color: #3c3a39;
+  padding: 20px;
+  border-radius: 8px;
+  transform: translateY(-150%);
+  transition: transform 0.4s ease-in-out;
+  z-index: 200;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.auth-access-dropdown-container.open {
+  transform: translateY(0);
+}
+
+.auth-access-dropdown-container > * {
+  animation: fadeIn 0.4s ease-in-out;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.label-input-container {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.password-label {
+  font-family: "Noto Sans", sans-serif;
+  font-weight: 600;
+  font-size: 12px;
+  color: #f55800;
+}
+
+.Password {
+  width: 100%;
+}
+
+.auth-message {
+  font-family: Inter;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 20px;
+  letter-spacing: 0%;
+  color: #f4f5f7;
+}

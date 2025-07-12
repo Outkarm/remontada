@@ -4,10 +4,12 @@ import MyLogo from "./components/MyLogo.jsx";
 import MenuItems from "./components/MenuItems.jsx";
 import Hamburger from "./components/Hamburger.jsx";
 import DropDownMenu from "./components/DropDownMenu.jsx";
+import AuthAccessDropDown from "./components/AuthAccessDropDown.jsx";
 
 const NavBar = () => {
   const [isMobile, setIsMobile] = useState(false);
   const [isClicked, setIsClicked] = useState(false);
+  const [isLogoClicked, setIsLogoClicked] = useState(false);
 
   useEffect(() => {
     const handleResize = () => {
@@ -25,7 +27,22 @@ const NavBar = () => {
   return isMobile ? (
     <div className="navigation-dropdown-container">
       <div className="navigation-bar">
-        {!isClicked ? <MyLogo /> : <div></div>}
+        {!isClicked ? (
+          <>
+            <MyLogo
+              setIsLogoClicked={setIsLogoClicked}
+              isLogoClicked={isLogoClicked}
+            />
+            {isLogoClicked && (
+              <AuthAccessDropDown
+                setIsLogoClicked={setIsLogoClicked}
+                isOpen={isLogoClicked}
+              />
+            )}
+          </>
+        ) : (
+          <div></div>
+        )}
 
         <Hamburger isClicked={isClicked} setIsClicked={setIsClicked} />
       </div>
@@ -37,7 +54,18 @@ const NavBar = () => {
     </div>
   ) : (
     <div className="navigation-bar">
-      <MyLogo />
+      <>
+        <MyLogo
+          setIsLogoClicked={setIsLogoClicked}
+          isLogoClicked={isLogoClicked}
+        />
+        {isLogoClicked && (
+          <AuthAccessDropDown
+            setIsLogoClicked={setIsLogoClicked}
+            isOpen={isLogoClicked}
+          />
+        )}
+      </>
       <MenuItems itemsArr={menuItems} />
     </div>
   );
