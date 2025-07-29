@@ -1,5 +1,5 @@
 import "../styles/MyRecentWorksProjects.css";
-import { useEffect } from "react";
+import { useMemo, useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 import ProjectCard from "./ProjectCard";
 import { updateAllCards } from "../../../redux/projectCardSlice/actions/cardActions";
@@ -29,7 +29,7 @@ const MyRecentWorksProjects = ({
   const loadCards = async () => {
     try {
       const response = await axios
-        .get("http://127.0.0.1:3000/projects")
+        .get(`${import.meta.env.VITE_API_URL}/projects`)
         .then((response) => {
           const data = response.data;
           console.log(data);
@@ -45,12 +45,16 @@ const MyRecentWorksProjects = ({
     }
   };
 
+  const projectCardsHash = useMemo(() => {
+    return JSON.stringify(projectCards);
+  }, [projectCards]);
+
   useEffect(() => {
     const handleLoadCards = async () => {
       await loadCards();
     };
     handleLoadCards();
-  }, [projectCards.length]);
+  }, [projectCards.length, projectCardsHash]);
 
   return (
     <div className="my-recent-projects-container">

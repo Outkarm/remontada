@@ -29,7 +29,7 @@ const ProjectCardPopUp = ({
   };
 
   return (
-    <div className="pop-up-card-container">
+    <div className="pop-up-card-container show">
       <button onClick={handleCloseBTN} className="close-btn">
         <FontAwesomeIcon size="3x" icon={faXmark} />
       </button>

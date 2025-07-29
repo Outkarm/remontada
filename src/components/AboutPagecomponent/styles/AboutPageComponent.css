@@ -8,6 +8,7 @@
   height: 100vh;
   overflow-x: hidden;
   background-color: #262626;
+  cursor: pointer;
 }
 
 .about-hr {

@@ -55,45 +55,47 @@ const MyRecentWorks = () => {
   return (
     <div className="my-recent-works-container">
       <BackgroundDesign />
-      <MyRecentWorksHead />
-      {projectCards ? (
-        <div className="my-recent-works-board-carousel">
-          <Swiper
-            modules={[Autoplay, Navigation]}
-            spaceBetween={30}
-            slidesPerView={1}
-            autoplay={{
-              delay: 3000,
-              disableOnInteraction: false,
-              pauseOnMouseEnter: true,
-            }}
-            loop
-          >
-            {projectCards.map((card, index) => (
-              <SwiperSlide key={index}>
-                <MyRecentWroksBoard
-                  projectInfo={card.summary_text}
-                  projectName={card.name}
-                  imgURL={card.image_url}
-                  bdgList={card.badge_list}
-                  projectId={index}
-                  setOpenPopUpCard={setOpenPopUpCard}
-                  setPopUpCardIndex={setPopUpCardIndex}
-                />
-              </SwiperSlide>
-            ))}
-          </Swiper>
-        </div>
-      ) : (
-        <MyRecentWroksBoard
-          projectInfo={projectInfo}
-          projectName={projectName}
-          imgURL={picLink}
-          bdgList={bdgList}
-          projectId={0}
-          setOpenPopUpCard={setOpenPopUpCard}
-        />
-      )}
+      <div className="head-and-board-container">
+        <MyRecentWorksHead />
+        {projectCards ? (
+          <div className="my-recent-works-board-carousel">
+            <Swiper
+              modules={[Autoplay, Navigation]}
+              spaceBetween={30}
+              slidesPerView={1}
+              autoplay={{
+                delay: 3000,
+                disableOnInteraction: false,
+                pauseOnMouseEnter: true,
+              }}
+              loop
+            >
+              {projectCards.map((card, index) => (
+                <SwiperSlide key={index}>
+                  <MyRecentWroksBoard
+                    projectInfo={card.summary_text}
+                    projectName={card.name}
+                    imgURL={card.image_url}
+                    bdgList={card.badge_list}
+                    projectId={index}
+                    setOpenPopUpCard={setOpenPopUpCard}
+                    setPopUpCardIndex={setPopUpCardIndex}
+                  />
+                </SwiperSlide>
+              ))}
+            </Swiper>
+          </div>
+        ) : (
+          <MyRecentWroksBoard
+            projectInfo={projectInfo}
+            projectName={projectName}
+            imgURL={picLink}
+            bdgList={bdgList}
+            projectId={0}
+            setOpenPopUpCard={setOpenPopUpCard}
+          />
+        )}
+      </div>
 
       <MyRecentWorksProjects
         openEditForm={opemTheEditForm}

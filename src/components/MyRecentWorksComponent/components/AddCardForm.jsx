@@ -18,6 +18,7 @@ const AddCardForm = ({ closeAddForm }) => {
     source_link: "",
     image_url: "",
   });
+  const [errors, setErrors] = useState({});
   const dispatch = useDispatch();
 
   const devtools = [
@@ -32,6 +33,34 @@ const AddCardForm = ({ closeAddForm }) => {
     { value: "csharp", label: "C#" },
   ];
 
+  const validateForm = () => {
+    const newErrors = {};
+
+    if (!formData.name.trim()) newErrors.name = "Project name is required.";
+    if (!formData.summary_text.trim())
+      newErrors.summary_text = "Summary is required.";
+    if (!formData.detailed_text.trim())
+      newErrors.detailed_text = "Description is required.";
+
+    const urlPattern = /^(https?:\/\/)[^\s/$.?#].[^\s]*$/i;
+    if (!urlPattern.test(formData.live_link))
+      newErrors.live_link = "Enter a valid Live Link URL.";
+    if (!urlPattern.test(formData.source_link))
+      newErrors.source_link = "Enter a valid Source Link URL.";
+
+    if (!selectedTools || selectedTools.length === 0)
+      newErrors.badge_list = "Select at least one tool.";
+    if (
+      !previewImage ||
+      (!previewImage.startsWith("data:image") &&
+        !previewImage.startsWith("http"))
+    )
+      newErrors.image_url = "Upload a valid image.";
+
+    setErrors(newErrors);
+    return Object.keys(newErrors).length === 0;
+  };
+
   const handleImageChange = (e) => {
     const file = e.target.files[0];
     if (file) {
@@ -39,13 +68,21 @@ const AddCardForm = ({ closeAddForm }) => {
       const reader = new FileReader();
       reader.onloadend = () => {
         setPreviewImage(reader.result);
+        setErrors((prev) => ({ ...prev, image_url: "" }));
       };
       reader.readAsDataURL(file);
     }
   };
 
+  const handleChange = (field, value) => {
+    setFormData((prev) => ({ ...prev, [field]: value }));
+    setErrors((prev) => ({ ...prev, [field]: "" }));
+  };
+
   const handleSubmit = async (e) => {
     e.preventDefault();
+
+    if (!validateForm()) return;
     console.log(selectedTools);
     const payload = {
       project: {
@@ -59,7 +96,7 @@ const AddCardForm = ({ closeAddForm }) => {
       console.log("Posting payload:", JSON.stringify(payload));
 
       const response = await axios.post(
-        "http://127.0.0.1:3000/projects",
+        `${import.meta.env.VITE_API_URL}/projects`,
         payload
       );
       console.log("Project created:", response.data);
@@ -86,9 +123,9 @@ const AddCardForm = ({ closeAddForm }) => {
           name="Projec Name"
           placeholder="Project Name"
           value={formData.name}
-          onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-          required
+          onChange={(e) => handleChange("name", e.target.value)}
         />
+        {errors.name && <small className="error-text">{errors.name}</small>}
       </div>
 
       <div className="label-input-container">
@@ -99,11 +136,11 @@ const AddCardForm = ({ closeAddForm }) => {
           name="Projec Summary"
           placeholder="Project Summary"
           value={formData.summary_text}
-          onChange={(e) =>
-            setFormData({ ...formData, summary_text: e.target.value })
-          }
-          required
+          onChange={(e) => handleChange("summary_text", e.target.value)}
         />
+        {errors.summary_text && (
+          <small className="error-text">{errors.summary_text}</small>
+        )}
       </div>
       <div className="label-input-container">
         <label htmlFor="Projec-Description">Project Description</label>
@@ -113,11 +150,11 @@ const AddCardForm = ({ closeAddForm }) => {
           name="Projec Description"
           placeholder="Project Description"
           value={formData.detailed_text}
-          onChange={(e) =>
-            setFormData({ ...formData, detailed_text: e.target.value })
-          }
-          required
+          onChange={(e) => handleChange("detailed_text", e.target.value)}
         />
+        {errors.detailed_text && (
+          <small className="error-text">{errors.detailed_text}</small>
+        )}
       </div>
       <div className="custom-select-wrapper">
         <label onClick={() => setIsOpen(!isOpen)} className="select-label">
@@ -137,6 +174,7 @@ const AddCardForm = ({ closeAddForm }) => {
                     const value = e.target.value;
                     if (e.target.checked) {
                       setSelectedTools([...selectedTools, value]);
+                      setErrors((prev) => ({ ...prev, badge_list: "" }));
                     } else {
                       setSelectedTools(
                         selectedTools.filter((v) => v !== value)
@@ -148,6 +186,9 @@ const AddCardForm = ({ closeAddForm }) => {
               </label>
             ))}
         </div>
+        {errors.badge_list && (
+          <small className="error-text">{errors.badge_list}</small>
+        )}
       </div>
 
       <div className="card-links-container">
@@ -159,27 +200,27 @@ const AddCardForm = ({ closeAddForm }) => {
             name="Live Link"
             placeholder="Live Link"
             value={formData.live_link}
-            onChange={(e) =>
-              setFormData({ ...formData, live_link: e.target.value })
-            }
+            onChange={(e) => handleChange("live_link", e.target.value)}
             className="card-link"
-            required
           />
+          {errors.live_link && (
+            <small className="error-text">{errors.live_link}</small>
+          )}
         </div>
         <div className="label-input-container">
-          <label htmlFor="Source-Link">SourceLink</label>
+          <label htmlFor="Source-Link">Source Link</label>
           <input
             type="url"
             id="Source-Link"
             name="Source Link"
             placeholder="Source Link"
             value={formData.source_link}
-            onChange={(e) =>
-              setFormData({ ...formData, source_link: e.target.value })
-            }
+            onChange={(e) => handleChange("source_link", e.target.value)}
             className="card-link"
-            required
           />
+          {errors.source_link && (
+            <small className="error-text">{errors.source_link}</small>
+          )}
         </div>
       </div>
       <div className="image-input-container">
@@ -205,6 +246,9 @@ const AddCardForm = ({ closeAddForm }) => {
         </div>
 
         {imageName && <span className="image-name">{imageName}</span>}
+        {errors.image_url && (
+          <small className="error-text">{errors.image_url}</small>
+        )}
       </div>
 
       <div className="button-group">
