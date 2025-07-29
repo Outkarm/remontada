@@ -3,10 +3,14 @@
   grid-template-columns: repeat(3, auto);
   grid-template-rows: repeat(auto-fit, minmax(327px, 1fr));
   gap: 40px; */
+  /* min-width: 80vw; */
+  width: auto;
   display: flex;
   flex-wrap: wrap;
-  justify-content: center;
-  gap: 60px;
+  margin-left: auto;
+  margin-right: auto;
+  /* justify-content: center; */
+  gap: 8vh 7vw;
 }
 
 .plus-container {
@@ -68,6 +72,12 @@
 .horizontal-plus-line {
   width: 42px;
   height: 6px;
+}
+
+@media (max-width: 1375px) {
+  .my-recent-projects-container {
+    justify-content: center;
+  }
 }
 
 @media (max-width: 768px) {

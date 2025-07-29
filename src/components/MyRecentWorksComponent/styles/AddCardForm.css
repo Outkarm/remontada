@@ -221,6 +221,12 @@ textarea {
   cursor: pointer;
 }
 
+.error-text {
+  color: red;
+  font-size: 0.8rem;
+  margin-top: 4px;
+}
+
 @media (max-width: 768px) {
   .card-form-container {
     width: 90vw;

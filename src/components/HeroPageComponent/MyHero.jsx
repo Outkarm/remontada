@@ -11,7 +11,7 @@ const MyHero = () => {
   const loadCards = async () => {
     try {
       const response = await axios
-        .get("http://127.0.0.1:3000/projects")
+        .get(`${import.meta.env.VITE_API_URL}/projects`)
         .then((response) => {
           const data = response.data;
           console.log(data);
