@@ -1,7 +1,7 @@
 <a name="readme-top"></a>
 
 <div align="center">
-  <img src="logo.PNG" alt="logo" width="150" height="auto" />
+  <img src="logo.png" alt="logo" width="150" height="auto" />
   <h1><b>KoyOutkarm Portfolio</b></h1>
   <p>A full-stack portfolio showcasing development projects, built with React and Rails APIs.</p>
 </div>
