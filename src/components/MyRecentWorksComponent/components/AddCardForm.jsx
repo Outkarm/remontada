@@ -40,6 +40,7 @@ const AddCardForm = ({ closeAddForm }) => {
     { value: "c", label: "C" },
     { value: "csharp", label: "C#" },
     { value: "cplusplus", label: "C++" },
+    { value: "css", label: "CSS" },
     { value: "chakraui", label: "Chakra UI" },
     { value: "chrome-devtools", label: "Chrome DevTools" },
     { value: "circleci", label: "CircleCI" },
